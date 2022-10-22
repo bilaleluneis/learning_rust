@@ -7,7 +7,9 @@
 #![allow(dead_code)]
 
 // this function will take value and move it from caller (own it)
-fn move_value_from_caller(value: String) -> String { return value; }
+fn move_value_from_caller(value: String) -> String {
+    return value;
+}
 
 fn borrow_value_from_caller(_: &String) {}
 
@@ -21,7 +23,7 @@ mod borrow_checker_basics_tests {
         let s = String::from("testString");
         assert_eq!(move_value_from_caller(s), "testString");
         /* uncomment bellow to see move error */
-        //assert_eq!(s, "testString");
+        // assert_eq!(s, "testString");
     }
 
     #[test]
@@ -30,5 +32,4 @@ mod borrow_checker_basics_tests {
         borrow_value_from_caller(&s);
         assert_eq!(s, "testString");
     }
-
 }
