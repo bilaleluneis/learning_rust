@@ -30,8 +30,8 @@ fn return_longest<'a>(x: &'a String, y: &'a String) -> &String {
    Not live longer than ref_val property the instance
    holds.
 */
-struct CycleRef<T> {
-    ref_val: T,
+struct CycleRef<'a, T> {
+    ref_val: &'a T,
 }
 
 #[cfg(test)]
