@@ -5,6 +5,7 @@ mod trait_object;
 mod traits_basics;
 mod type_extension;
 mod deref_trait;
+mod drop_trait;
 
 // this must be present for binary project
 fn main() {}

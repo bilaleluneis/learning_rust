@@ -9,11 +9,11 @@
 use std::ops::Deref;
 
 // tuple type struct, members accesses by index 0..
-struct BasicBox<T>(T);
+pub struct BasicBox<T>(T);
 
 impl<T> BasicBox<T> {
     // associated function called as BasicBox::new(v)
-    fn new(value: T) -> BasicBox<T> {
+    pub fn new(value: T) -> BasicBox<T> {
         BasicBox(value)
     }
 }
